@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7effc">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Alessia tiene una invitación para ti.">
+  <title>Una invitación para ti · Alessia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="cover-page">
+  <main class="cover">
+    <div class="cover-head">
+      <div class="eyebrow">✦ Con mucho cariño ✦</div>
+      <h1 class="script">Tienes una <span>invitación</span></h1>
+    </div>
+    <button class="envelope-button" type="button" aria-label="Abrir el sobre y ver la invitación de Alessia">
+      <span class="envelope-back" aria-hidden="true"></span>
+      <span class="letter" aria-hidden="true"><img src="assets/alessia-portada.webp" alt=""><strong>Alessia cumple <b>4</b></strong></span>
+      <span class="envelope-front" aria-hidden="true"></span>
+      <span class="envelope-flap" aria-hidden="true"></span>
+      <span class="seal" aria-hidden="true">✦</span>
+    </button>
+    <p class="cover-prompt script">Toca el sobre para descubrirla</p>
+    <p class="cover-foot">Domingo 27 de setiembre · 6:00 p. m.</p>
+  </main>
+  <script>
+    const envelope = document.querySelector('.envelope-button');
+    envelope.addEventListener('click', () => {
+      if (envelope.classList.contains('opening')) return;
+      envelope.classList.add('opening');
+      setTimeout(() => { window.location.href = 'invitacion.html'; }, 700);
+    });
+  </script>
+</body>
+</html>
