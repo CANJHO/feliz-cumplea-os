@@ -25,10 +25,13 @@
     <p class="cover-prompt script">Toca el sobre para descubrirla</p>
     <p class="cover-foot">Domingo 27 de setiembre · 6:00 p. m.</p>
   </main>
+  <audio id="background-music" src="assets/audio/musica-invitacion.mp3" preload="auto" loop></audio>
+  <script src="music.js"></script>
   <script>
     const envelope = document.querySelector('.envelope-button');
     envelope.addEventListener('click', () => {
       if (envelope.classList.contains('opening')) return;
+      window.startInvitationMusic?.();
       envelope.classList.add('opening');
       setTimeout(() => { window.location.href = 'invitacion.html'; }, 700);
     });
